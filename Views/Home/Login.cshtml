@@ -1,0 +1,11 @@
+﻿@model ShortnerService.Models.User 
+@{
+    ViewData["Title"] = "Login";
+}
+
+<form asp-action="Login" asp-controller="Home" method="post">
+    <input class="form-control" type="text" asp-for="@Model.Email" placeholder="Email"/>
+    <input class="form-control" type="password" asp-for="@Model.Password" placeholder="Password"/>
+    <input type="hidden" name="@ViewBag.Redirect" id="@ViewBag.Redirect"/>
+    <input class="btn btn-info" type="submit" value="Login" style="margin: auto;display: block;"/>
+</form>

@@ -1,0 +1,10 @@
+﻿@model ShortnerService.Models.User
+
+<form method="post" asp-action="Settings" asp-controller="Home">
+    <input type="hidden" asp-for="@Model.Id" value="@Model.Id" />
+    <label>A notification will be sent to this email</label>
+    <input class="form-control" type="text" asp-for="@Model.Email" value="@Model.Email" />
+    <input class="form-control" type="text" asp-for="@Model.Password" value="@Model.Password" />
+    <input type="hidden" asp-for="@Model.RoleId" value="@Model.RoleId" />
+    <input class="btn btn-success" style="margin: auto;display: block;" type="submit" value="Save"/>
+</form>
